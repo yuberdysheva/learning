@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Coctails</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.
+min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".left_menu .small").addClass('nonealco');
+                $(".right_menu .small").addClass('unit-menu');
+                $(".nonealco").click(function(event){
+                    $(".list-b").toggle();
+                    offsetLeft = 0;
+                    offsetTop = 0;
+                    offsetLeft += event.currentTarget.offsetLeft;
+                    offsetLeft -= 180;
+                    offsetTop += event.currentTarget.offsetTop;
+                    offsetTop -= -44;
+                    $( ".list-b" ).offset({
+                        top: offsetTop, left: offsetLeft
+                    });
+                });
+                $(".unit-menu").click(function(event){
+                    $(".list-s").toggle();
+                    offsetLeft = 0;
+                    offsetTop = 0;
+                    offsetLeft += event.currentTarget.offsetLeft;
+                    offsetLeft -= 63;
+                    offsetTop += event.currentTarget.offsetTop;
+                    offsetTop -= -45;
+                    $(".list-s" ).offset({
+                        top: offsetTop, left: offsetLeft
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        
+        
+        
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="description.html"><img class="notepad" src="notepad.png">Описание</a>
+                </li>
+                <li>
+                    <a href="ingredients.html" id="active"><img class="bottle" src="bottle%20%D0%BA%D0%BE%D0%BF%D0%B8.png">Ингредиенты</a>
+                </li>
+                <li>
+                  <a href="options.html"><img class="options" src="plate.png">Параметры</a>
+                </li>
+                <li>
+                    <a href="goblets.html"><img class="goblets" src="goblet.png">Бокалы</a>
+                </li>
+            </ul>
+            <div class="lines"></div>
+            <img src="bottle_1.png" class="bottle_page">
+            <p class="text_desc">Ингредиенты</p>
+            <img src="strawberry.png" class="straw">  
+            <div class="decor">
+                  Украшение?
+                  <div class="bottom-border-1"></div>
+                  <div class="bottom-border-2"></div>
+            </div>
+                      
+            
+            
+            
+            <div class="wrapper">
+                <div class="col left_menu">
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small small-s"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col right_menu">
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                </div>
+                <div class="col col-3">
+                    <div class="checkbox">
+                        <input id="check1" type="checkbox" name="check" value="check1">
+                        <label for="check1"></label>
+                        <input id="check2" type="checkbox" name="check" value="check2">
+                        <label for="check2"></label>
+                        <input id="check3" type="checkbox" name="check" value="check3">
+                        <label for="check3"></label>
+                        <input id="check4" type="checkbox" name="check" value="check4">
+                        <label for="check4"></label>
+                        <input id="check5" type="checkbox" name="check" value="check5">
+                        <label for="check5"></label>
+                        <input id="check6" type="checkbox" name="check" value="check6">
+                        <label for="check6"></label>
+                        <input id="check7" type="checkbox" name="check" value="check7">
+                        <label for="check7"></label>
+                    </div>
+                </div>
+            </div>
+            <ul class="list list-b">
+                <li>Безалкогольные напитки</li>
+                <li>&#10003; Вода</li>
+                <li>&#10003; Сок</li>
+                <li>&#10003; Молоко</li>
+                </ul>
+            <ul class="list list-s">
+                <li>&#10003; мл</li>
+                <li>&#10003; гр</li>
+                <li>&#10003; кг</li>
+            </ul>
+            
+            <a href="description.html" class="small_btn btn-1"><p>Описание</p></a>
+            <a href="options.html" class="small_btn"><p>Параметры</p></a>
+            <div class="lines_bottom"></div>
+            
+        </div>
+    </body>
+</html>

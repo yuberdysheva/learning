@@ -1,0 +1,258 @@
+<!DOCTYPE html> 
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Coctails</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.
+min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*добавляем список меню 1 колонки*/
+                $(".left-menu .field").append('<ul></ul>');
+                $(".left-menu .field ul").addClass("list-items");
+                $(".left-menu .field .list-items").append('<li>&#10003; Вода</li>');
+                $(".left-menu .field .list-items").append('<li>&#10003; Сок</li>');
+                $(".left-menu .field .list-items").append('<li>&#10003; Молоко</li>');
+                /*добавляем список меню 3 колонки*/
+                $(".right-menu .field").append('<ul></ul>');
+                $(".right-menu .field ul").addClass("list-items");
+                var sel = ".right-menu .field .list-items"
+                $(sel).append('<li>&#10003; мл</li>');
+                $(sel).append('<li>&#10003; гр</li>');
+                $(sel).append('<li>&#10003; кг</li>');
+                /*Slide menu 1 3 col*/
+                var prev;
+                $("body").click(function(event){
+                    $(".list").hide();
+                });
+                $(".field .small").click(function(event){
+                    var arr = [];
+                    var items = $(event.currentTarget).next().children();
+                    for (var i = 0; i < items.length; i++){
+                    var el = $(items[i]).text();
+                    arr.push(el);
+                    };
+                    var lst = $(".list");
+                    lst.empty();
+                    for (var i=0; i < arr.length; i++){
+                        lst.append("<li>" + arr[i] + "</li>");
+                    };
+                    if (event.currentTarget == prev){
+                        lst.toggle();
+                    } else {
+                        lst.show();
+                        prev = event.currentTarget;
+                    };
+                    var wid = $(event.currentTarget).prev().width();
+                    $(".list").width(wid + 27);
+                    offsetLeft = 0;
+                    offsetTop = 0;
+                    offsetLeft += event.currentTarget.offsetLeft;
+                    offsetLeft -= wid +3;
+                    offsetTop += event.currentTarget.offsetTop;
+                    offsetTop -= -43;
+                    $( ".list" ).offset({
+                        top: offsetTop, left: offsetLeft
+                    });
+                    for (var i=0; i < arr.length; i++){
+                        var x = lst.children()[i];
+                        $(x).click(function(ev){
+                            var txt = $(ev.currentTarget).text().substring(2);
+                            $(event.currentTarget).prev().text(txt).css("color", "#6b6b6b");
+                        });
+                    };
+                    event.stopPropagation();
+                });
+                $(".up").click(function(event){
+                     var val = $(event.currentTarget).parent().prev().val();
+                     val ++;
+                     $(event.currentTarget).parent().prev().val(val);
+                });
+                $(".down").click(function(event){ 
+                    var val = $(event.currentTarget).parent().prev().val();
+                    if (val > 1){
+                        val --;
+                        $(event.currentTarget).parent().prev().val(val);
+                    };
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        
+        
+        
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="description.html"><img class="notepad" src="notepad.png">Описание</a>
+                </li>
+                <li>
+                    <a href="ingredients.html" id="active"><img class="bottle" src="bottle%20%D0%BA%D0%BE%D0%BF%D0%B8.png">Ингредиенты</a>
+                </li>
+                <li>
+                  <a href="options.html"><img class="options" src="plate.png">Параметры</a>
+                </li>
+                <li>
+                    <a href="goblets.html"><img class="goblets" src="goblet.png">Бокалы</a>
+                </li>
+            </ul>
+            <div class="lines"></div>
+            <img src="bottle_1.png" class="bottle_page">
+            <p class="text_desc">Ингредиенты</p>
+            <img src="strawberry.png" class="straw">  
+            <div class="decor">
+                  Украшение?
+                  <div class="bottom-border-1"></div>
+                  <div class="bottom-border-2"></div>
+            </div>
+                      
+            
+            
+            
+            <div class="wrapper">
+                <div class="col left-menu">
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small small-s"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field">
+                        <div class="big">Название ингредиента</div>
+                        <div class="small"></div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2 up"></div>
+                            <div class="small-1 down"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2 up"></div>
+                            <div class="small-1 down"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2 up"></div>
+                            <div class="small-1 down"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2 up"></div>
+                            <div class="small-1 down"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2 up"></div>
+                            <div class="small-1 down"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2 up"></div>
+                            <div class="small-1 down"></div>
+                        </div>
+                    </div>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2 up"></div>
+                            <div class="small-1 down"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col right-menu">
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                    <div class="field units">
+                        <div class="big big-1">мл</div>
+                        <div class="small"></div>
+                    </div>
+                </div>
+                <div class="col col-3">
+                    <div class="checkbox">
+                        <input id="check1" type="checkbox" name="check" value="check1">
+                        <label for="check1"></label>
+                        <input id="check2" type="checkbox" name="check" value="check2">
+                        <label for="check2"></label>
+                        <input id="check3" type="checkbox" name="check" value="check3">
+                        <label for="check3"></label>
+                        <input id="check4" type="checkbox" name="check" value="check4">
+                        <label for="check4"></label>
+                        <input id="check5" type="checkbox" name="check" value="check5">
+                        <label for="check5"></label>
+                        <input id="check6" type="checkbox" name="check" value="check6">
+                        <label for="check6"></label>
+                        <input id="check7" type="checkbox" name="check" value="check7">
+                        <label for="check7"></label>
+                    </div>
+                </div>
+            </div>
+            <ul class="list">
+                
+            </ul>
+            
+            <a href="description.html" class="small_btn btn-1"><p>Описание</p></a>
+            <a href="options.html" class="small_btn"><p>Параметры</p></a>
+            <div class="lines_bottom"></div>
+            
+        </div>
+    </body>
+</html>

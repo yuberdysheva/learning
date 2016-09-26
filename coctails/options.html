@@ -1,0 +1,170 @@
+<!DOCTYPE html> 
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Coctails</title>
+        <script type="text/javascript" src="js/jquery-3.1.0.js"></script>                
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.
+min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".method").click(function(event){
+                    $(".list-method").toggle();
+                    offsetLeft = 0;
+                    offsetTop = 0;
+                    offsetLeft += event.currentTarget.offsetLeft;
+                    offsetLeft -= 180;
+                    offsetTop += event.currentTarget.offsetTop;
+                    offsetTop -= -44;
+                    $( ".list-method" ).offset({
+                        top: offsetTop, left: offsetLeft
+                    });
+                });
+                $(".time").click(function(event){
+                    $(".list-time").toggle();
+                    offsetLeft = 0;
+                    offsetTop = 0;
+                    offsetLeft += event.currentTarget.offsetLeft;
+                    offsetLeft -= 63;
+                    offsetTop += event.currentTarget.offsetTop;
+                    offsetTop -= -45;
+                    $(".list-time" ).offset({
+                        top: offsetTop, left: offsetLeft
+                    });
+                });
+            });
+        </script>        
+        
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="main.css">        
+        
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="description.html"><img class="notepad" src="notepad.png">Описание</a>
+                </li>
+                <li>
+                    <a href="ingredients.html"><img class="bottle" src="bottle%20%D0%BA%D0%BE%D0%BF%D0%B8.png">Ингредиенты</a>
+                </li>
+                <li>
+                  <a href="options.html" id="active"><img class="options" src="plate.png">Параметры</a>
+                </li>
+                <li>
+                    <a href="goblets.html"><img class="goblets" src="goblet.png">Бокалы</a>
+                </li>
+            </ul>
+            <div class="lines"></div>
+            <img src="plate-1.png" class="plate_page"> 
+            <p class="text_desc">&nbsp;&nbsp;&nbsp;Параметры приготовления</p><br>
+
+                <div class="option-col option-col-pad">
+                    <p>&#10003;Порций</p>
+                    <div class="wrapper-2">
+                        <input type="number" class="number" value="1" min="1" max="100">
+                        <div class="wrapper-btn">
+                            <div class="small-1 small-2"></div>
+                            <div class="small-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option-col">
+                    <p>&#10003;Время</p>
+                    <div class="field">
+                        <div class="big big-2">5 мин.</div>
+                        <div class="small small-time time"></div>
+                    </div>
+                </div>
+                <div class="option-col">
+                    <p>&#10003;Сложность</p>
+                    <div class="field">
+                        <div class="big big-3">Выберите из списка</div>
+                        <div class="small small-time method"></div>
+                    </div>
+                </div>
+                <div class="option-col">
+                    <p>&#10003;Метод</p>
+                    <div class="field">
+                        <div class="big big-3">Выберите из списка</div>
+                        <div class="small small-time method"></div>
+                    </div>
+                </div>
+            
+            <img src="wineglass.png" class="wineglass">
+            <p class="text_desc">Тип коктейля</p><br>
+            
+            <div class="option-col option-col-pad">
+                <p>&#10003;По крепкости</p>
+                <div class="field">
+                    <div class="big big-3">Выберите из списка</div>
+                    <div class="small small-time method"></div>
+                </div>
+            </div>
+            <div class="option-col">
+                <p>&#10003;На основе</p>
+                <div class="field">
+                    <div class="big big-3">Выберите из списка</div>
+                    <div class="small small-time method"></div>
+                </div>
+            </div>
+            <div class="option-col">
+                <p>&#10003;По типу</p>
+                <div class="field">
+                    <div class="big big-3">Выберите из списка</div>
+                    <div class="small small-time method"></div>
+                </div>
+            </div>            
+            <img src="Tags.png" class="tags">
+            <p class="text_desc" >&nbsp;Теги</p>
+            <br />
+            
+            
+            <div class="checkbox checkbox-tags">
+                <input id="check1" type="checkbox" name="check" value="check1">
+                <label for="check1">Бодрящие</label>
+                <input id="check2" type="checkbox" name="check" value="check2">
+                <label for="check2">Горькие</label>
+                <input id="check3" type="checkbox" name="check" value="check3">
+                <label for="check3">Кислые</label>
+                <input id="check4" type="checkbox" name="check" value="check4">
+                <label for="check4">Сладкие</label>
+            </div>
+            <div class="checkbox checkbox-tags">
+                <input id="check5" type="checkbox" name="check" value="check5">
+                <label for="check5">Соленые</label>
+                <input id="check6" type="checkbox" name="check" value="check6">
+                <label for="check6">Травяные</label>
+                <input id="check7" type="checkbox" name="check" value="check7">
+                <label for="check7">Тропические</label>
+                <input id="check8" type="checkbox" name="check" value="check8">
+                <label for="check8">Фруктовые</label>
+            </div>
+            <div class="checkbox checkbox-tags">
+                <input id="check9" type="checkbox" name="check" value="check9">
+                <label for="check9">Необыч. по употреб.</label>
+                <input id="check10" type="checkbox" name="check" value="check10">
+                <label for="check10">Для компании</label>
+                <input id="check11" type="checkbox" name="check" value="check11">
+                <label for="check11">Для друзей</label>
+                <input id="check12" type="checkbox" name="check" value="check12">
+                <label for="check12">Сладкие</label>
+            </div>
+            
+             <a href="ingredients.html" class="small_btn btn-1 btn-2"><p>Ингредиенты</p></a>
+            <a href="goblets.html" class="small_btn"><p>Бокалы</p></a>
+            <div class="lines_bottom"></div>
+            
+            <ul class="list list-s list-time">
+                <li>&#10003; 5 мин.</li>
+                <li>&#10003; 10 мин.</li>
+                <li>&#10003; 15 мин.</li>
+                </ul>
+            <ul class="list list-s list-method">
+                <li>&#10003; в шейкере</li>
+                <li>&#10003; в блендере</li>
+                <li>&#10003; в бокале</li>
+            </ul>
+
+        </div>
+    </body>
+</html>

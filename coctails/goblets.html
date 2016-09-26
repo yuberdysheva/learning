@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Coctails</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.
+min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".glass").mouseover(function(event){
+                    $(".coctail").show();
+                    offsetLeft = 0;
+                    offsetTop = 0;
+                    offsetLeft += event.currentTarget.offsetLeft;
+                    offsetLeft -= 10;
+                    offsetTop += event.currentTarget.offsetTop;
+                    offsetTop -= 48;
+                    $( ".coctail" ).offset({
+                        top: offsetTop, left: offsetLeft
+                    });
+                });
+                $(".glass").mouseout(function(){
+                    $(".coctail").hide();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        
+        
+        
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="description.html"><img class="notepad" src="notepad.png">Описание</a>
+                </li>
+                <li>
+                    <a href="ingredients.html"><img class="bottle" src="bottle%20%D0%BA%D0%BE%D0%BF%D0%B8.png">Ингредиенты</a>
+                </li>
+                <li>
+                  <a href="options.html"><img class="options" src="plate.png">Параметры</a>
+                </li>
+                <li>
+                    <a href="goblets.html"id="active"><img class="goblets" src="goblet.png">Бокалы</a>
+                </li>
+            </ul>
+            <div class="lines"></div>
+            <img src="goblet-1.png" class="goblet_page">
+            <p class="text_desc">Бокалы</p><br>
+
+            
+            
+            
+            <div class="glass">
+                <img src="glass1.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+                <div class="coctail">
+                  <div class="glass-triangle">
+                    Бокал для слоистых коктейлей
+                    <div class="border-1"></div>
+                    <div class="border-2"></div>
+                  </div>
+                  <div class="pinch">
+                      <div class="triangle"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass2.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass3.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass4.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass5.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass6.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass7.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass8.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass9.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass10.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass11.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass12.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass13.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass14.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass15.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass16.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass17.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass">
+                <img src="glass18.png">
+                <div class="btn-glass">
+                    &#10003; Выбрать
+                </div>
+            </div>
+            <div class="glass"></div>
+            <div class="glass"></div>
+            
+
+            <a href="ingredients.html" class="small_btn btn-1 btn-2"><p>Параметры</p></a><br>
+            <a href="ingredients.html" class="send">Отправить</a><br>
+            <div class="lines_bottom"></div>
+
+        </div>
+    </body>
+</html>
